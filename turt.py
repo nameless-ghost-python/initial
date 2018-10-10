@@ -65,7 +65,7 @@ while answer != 'n':
             gotoxy(base_x + math.sin(phi_rad) * R, base_y + math.cos(phi_rad) * R + 60)
             draw_circle(22, 'red')
             gotoxy(-150, 250)
-            turtle.write('В твоей голове новая дырка. Прощай!', font=('Arial', 18, 'normal'))
+            turtle.write('В твоей голове новая дырка. Прощай неудачник!', font=('Arial', 18, 'normal'))
 
     else:
         pass
