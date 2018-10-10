@@ -8,13 +8,13 @@ PHI = 360 / 7
 R = 50
 
 
-def gotoxy(x, y):
+def gotoxy(x, y): #перемещение в точку
     turtle.penup()
     turtle.goto(x, y)
     turtle.pendown()
 
 
-def draw_circle(r, color):
+def draw_circle(r, color): #отрисовка круга
     turtle.fillcolor(color)
     turtle.begin_fill()
     turtle.circle(r)
