@@ -1,4 +1,4 @@
-# coding utf-8
+# coding = UTF-8
 import turtle
 import random
 import math
@@ -50,7 +50,7 @@ def rotate_pistol(base_x, base_y, start):
 
 turtle.speed(0)
 
-draw_pistol(100, 100)
+draw_pistol(50, 20)
 
 answer = ''
 start = 0
@@ -59,10 +59,11 @@ while answer != 'n':
     answer = turtle.textinput('Проверим твою удачу?', 'y/n')
 
     if answer == 'y':
-        start = rotate_pistol(100, 100, start)
+        start = rotate_pistol(50, 20, start)
 
         if start == 0:
-            gotoxy(base_x + math.sin(phi_rad) * R, base_y + math.cos(phi_rad) * R + 60)
+            phi_rad = PHI * 0 * math.pi / 180.0
+            gotoxy(50 + math.sin(phi_rad) * R, 20 + math.cos(phi_rad) * R + 60)
             draw_circle(22, 'red')
             gotoxy(-150, 250)
             turtle.write('В твоей голове новая дырка. Прощай неудачник!', font=('Arial', 18, 'normal'))
