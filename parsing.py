@@ -36,15 +36,15 @@ import requests
 # pprint(parsed_json)
 
 # парсинг hh.ru
-BASE_URL = 'https://api.hh.ru/'
-vac_r = requests.get(BASE_URL + 'vacancies')
-vac_python = requests.get(BASE_URL + 'vacancies/?text=python')
-vacancies = vac_r.json()['items']
-vacancies_python = vac_python.json()['items']
-vac_simple = vac_r.json()['items'][0]
-full_vacancies = requests.get('https://api.hh.ru/vacancies/' + vac_simple['id'])
+BASE_HH_URL = 'https://api.hh.ru/'
+# vac_r = requests.get(BASE_HH_URL + 'vacancies')
+vac_python_msk = requests.get(BASE_HH_URL + 'vacancies/?text=Python+junior&area=1')
+# vacancies = vac_r.json()['items']
+vacancies_python = vac_python_msk.json()['items']
+# vac_simple = vac_r.json()['items'][5]
+# full_vacancies = requests.get('https://api.hh.ru/vacancies/' + vac_simple['id'])
 full_vac_py = requests.get('https://api.hh.ru/vacancies/' + vacancies_python[0]['id'])
-pprint(full_vac_py.json())
+pprint(vacancies_python[1]['alternate_url'])
 
 # парсинг данных статичного сайта (старый форум)
 # BASE_URL = "http://forum.rebels-guild.ru/viewtopic.php?f=2&t=6566&start=90"
